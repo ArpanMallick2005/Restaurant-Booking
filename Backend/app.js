@@ -9,7 +9,7 @@ const app=express();
 dotenv.config({path:'./config/config.env' });
 
 app.use(cors({
-    origin:[process.env.FRONTEND_URL],
+    origin:[process.env.FRONTEND_URL,  "https://restaurant-booking-1-86d0.onrender.com"],
     methods:["POST"],
     credentials:true,
 })
@@ -22,8 +22,8 @@ dbConnection();
 
 app.use(errorMiddleware);
 
-app.listen(process.env.PORT,()=>{
-    console.log(`Server Running On Port ${process.env.PORT}`);
-});
+// app.listen(process.env.PORT,()=>{
+//     console.log(`Server Running On Port ${process.env.PORT}`);
+// });
 
 export default app;
