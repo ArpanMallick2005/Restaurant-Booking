@@ -3,7 +3,7 @@ import QRCode from 'react-qr-code';
 import { useNavigate } from 'react-router-dom';
 
 const QRCodePage = () => {
-  const [qrValue, setQrValue] = useState('http://localhost:4000/api/v1/reservation/send'); // Example value
+  const [qrValue, setQrValue] = useState('https://restaurant-booking-o3wf.onrender.com/api/v1/reservation/send'); // Example value
   const navigate = useNavigate();
 
   const handleSubmit = () => {
